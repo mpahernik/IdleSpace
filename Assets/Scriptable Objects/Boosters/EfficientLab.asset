@@ -18,5 +18,5 @@ MonoBehaviour:
   Image: {fileID: 21300000, guid: 9fc1fd1ba0d67ed4fb37e2cbce63429c, type: 3}
   CostIncrease: 3
   IncreaseAmount: 50
-  Boostertype: 1
+  Boostertype: 0
   Costtype: 0

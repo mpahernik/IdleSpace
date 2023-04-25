@@ -16,5 +16,7 @@ MonoBehaviour:
   Cost: 150
   Name: Gardens
   Income: 3
-  Image: {fileID: 21300000, guid: b7dca4edf60623949a5ee1c86548889e, type: 3}
+  Image: {fileID: 21300000, guid: c08d2d92c0bafe841bd6b6a2049657fc, type: 3}
   CostIcrease: 1.55
+  ResourceType: 0
+  CostType: 0

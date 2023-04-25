@@ -15,5 +15,5 @@ MonoBehaviour:
   IncomePerClick: 100
   TimeToFinish: 120
   Image: {fileID: 21300000, guid: ff00345da0563d641903c5bd5bb748a4, type: 3}
-  Name: Science Lab
-  ResourceType: 1
+  Name: Explore
+  ResourceType: 0

@@ -68,7 +68,7 @@ public class BoosterDisplay : MonoBehaviour
             GameManager.Resource -= cost;
             cost *= costinc;
             costtext.text = cost.ToString();
-
+            Unlock();
             //what does each booster type do
             switch (boostr.Boostertype)
             {
@@ -76,7 +76,7 @@ public class BoosterDisplay : MonoBehaviour
                     if (target.gameObject.tag == "Clicker")
                     {
                         target.gameObject.GetComponent<ClickerDisplay>()._incomeperclick = target.gameObject.GetComponent<ClickerDisplay>()._incomeperclick + target.gameObject.GetComponent<ClickerDisplay>()._incomeperclick * (increaseamount / 100);
-                        target.gameObject.GetComponent<ClickerDisplay>().Income.text = target.gameObject.GetComponent<ClickerDisplay>().Income.ToString() + "per click";
+                        target.gameObject.GetComponent<ClickerDisplay>().Income.text = target.gameObject.GetComponent<ClickerDisplay>()._incomeperclick.ToString() ;
                     }
                     else if (target.gameObject.tag == "Node")
                     {
@@ -114,6 +114,32 @@ public class BoosterDisplay : MonoBehaviour
 
 
 
+    }
+
+    void Unlock()
+    {
+        foreach (GameObject unlocky in Tounlock)
+        {
+            unlocky.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            unlocky.gameObject.transform.GetChild(1).gameObject.SetActive(true);
+
+            switch (unlocky.gameObject.tag)
+            {
+                case ("Node"):
+                    unlocky.gameObject.GetComponent<NodeDisplay>()._unlocked = true;
+                    break;
+                case ("Bonus"):
+                    unlocky.gameObject.GetComponent<BoosterDisplay>()._unlocked = true;
+                    break;
+                case ("Clicker"):
+                    unlocky.gameObject.GetComponent<ClickerDisplay>()._unlocked = true;
+                    break;
+
+
+            }
+
+
+        }
     }
 
 

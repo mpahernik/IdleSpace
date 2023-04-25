@@ -16,5 +16,7 @@ MonoBehaviour:
   Cost: 10
   Name: Mothership
   Income: 1
-  Image: {fileID: 21300000, guid: da65a056a739cc14baf0508aba48c110, type: 3}
+  Image: {fileID: 21300000, guid: 96f4ff691fb35864fa4d15f7e31c39ea, type: 3}
   CostIcrease: 1.45
+  ResourceType: 0
+  CostType: 0
